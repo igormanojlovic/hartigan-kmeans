@@ -1,12 +1,8 @@
-<!-- This should be the location of the title of the repository, normally the short name -->
-# Hartigan's K-Means
+# hkmeans: Hartigan's K-Means in Python and in C++
 
+[![license](https://img.shields.io/badge/License-Apache_2.0-brightgreen.svg)](LICENSE)
+[![python](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/)
 
-<!-- Build Status, is a great thing to have at the top of your repository, it shows that you take your CI/CD as first class citizens -->
-<!-- [![Build Status](https://travis-ci.org/jjasghar/ibm-cloud-cli.svg?branch=master)](https://travis-ci.org/jjasghar/ibm-cloud-cli) -->
-[![Build Status](https://github.com/IBM/hartigan-kmeans/actions/workflows/build.yml/badge.svg)](https://github.com/IBM/hartigan-kmeans/actions/workflows/build.yml)
-
-<!-- Not always needed, but a scope helps the user understand in a short sentence like below, why this repo exists -->
 ## Scope
 
 This project provides an efficient implementation of Hartigan’s method for k-means clustering ([Hartigan 1975](#references)). It builds on the work of [Slonim, Aharoni and Crammer (2013)](#references), which introduced a significant improvement to the algorithm computational complexity, and adds an additional optimization for inputs in sparse vector representation. The project is packaged as a python library with a cython-wrapped C++ extension for the partition optimization code. A pure python implementation is included as well.
@@ -16,8 +12,11 @@ This project provides an efficient implementation of Hartigan’s method for k-m
 
 ```pip install hartigan-kmeans```
 
+Alternatively:
 
-<!-- A more detailed Usage or detailed explanation of the repository here -->
+```pip install git+https://github.com/igormanojlovic/hartigan-kmeans```
+
+
 ## Usage
 The main class in this library is `HKmeans`, which implements the clustering interface of [SciKit Learn][sklearn], providing methods such as `fit()`, `fit_transform()`, `fit_predict()`, etc. 
 
@@ -71,36 +70,12 @@ Adjusted Mutual-Info: 0.263
 See the [Examples](examples) directory for more illustrations and a comparison against Lloyd's K-Means.
 
 
-<!-- License and Authors is optional here, but gives you the ability to highlight who is involed in the project -->
-## License
-
-```text
-Copyright IBM Corporation 2021
-
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
-
-```
-
-If you would like to see the detailed LICENSE click [here](LICENSE).
-
-
 ## Authors 
 - Algorithm: [Hartigan 1975](#references)
 - Pseudo-code and optimization: [Slonim, Aharoni and Crammer (2013)](#references)
 - Programming, optimization and maintenance: [Assaf Toledo](https://github.com/assaftibm)
 
 
-<!-- Questions can be useful but optional, this gives you a place to say, "This is how to contact this project maintainers or create PRs -->
 If you have any questions or issues you can create a new [issue here][issues].
 
 ## References
